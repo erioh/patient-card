@@ -13,7 +13,7 @@ public class PatientDto {
 
     private String lastName;
 
-    private String patronimic;
+    private String patronymic;
 
     private Integer sex;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
@@ -47,12 +47,12 @@ public class PatientDto {
         this.lastName = lastName;
     }
 
-    public String getPatronimic() {
-        return patronimic;
+    public String getPatronymic() {
+        return patronymic;
     }
 
-    public void setPatronimic(String patronimic) {
-        this.patronimic = patronimic;
+    public void setPatronymic(String patronymic) {
+        this.patronymic = patronymic;
     }
 
     public Integer getSex() {
@@ -93,7 +93,7 @@ public class PatientDto {
         sb.append("id=").append(id);
         sb.append(", firstName='").append(firstName).append('\'');
         sb.append(", lastName='").append(lastName).append('\'');
-        sb.append(", patronimic='").append(patronimic).append('\'');
+        sb.append(", patronymic='").append(patronymic).append('\'');
         sb.append(", sex=").append(sex);
         sb.append(", dateOfBirth=").append(dateOfBirth);
         sb.append(", address=").append(address);
@@ -110,7 +110,7 @@ public class PatientDto {
         return Objects.equals(id, that.id) &&
                 Objects.equals(firstName, that.firstName) &&
                 Objects.equals(lastName, that.lastName) &&
-                Objects.equals(patronimic, that.patronimic) &&
+                Objects.equals(patronymic, that.patronymic) &&
                 Objects.equals(sex, that.sex) &&
                 Objects.equals(dateOfBirth, that.dateOfBirth) &&
                 Objects.equals(address, that.address) &&
@@ -120,6 +120,6 @@ public class PatientDto {
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, firstName, lastName, patronimic, sex, dateOfBirth, address, phoneSet);
+        return Objects.hash(id, firstName, lastName, patronymic, sex, dateOfBirth, address, phoneSet);
     }
 }

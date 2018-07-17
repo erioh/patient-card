@@ -34,14 +34,13 @@ public class Diagnosis {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Diagnosis diagnosis = (Diagnosis) o;
-        return Objects.equals(id, diagnosis.id) &&
-                Objects.equals(text, diagnosis.text);
+        return Objects.equals(text, diagnosis.text);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, text);
+        return Objects.hash(text);
     }
 
     @Override

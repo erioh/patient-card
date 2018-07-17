@@ -2,6 +2,7 @@ package ua.clinic.patient.card.service.impl;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ua.clinic.patient.card.dao.PatientDao;
 import ua.clinic.patient.card.dao.entity.Patient;
 import ua.clinic.patient.card.service.PatientService;
@@ -37,6 +38,7 @@ public class DefaultPatientService implements PatientService {
     }
 
     @Override
+    @Transactional
     public void save(PatientDto patientDto) {
         patientDao.save(modelMapper.map(patientDto, Patient.class));
 

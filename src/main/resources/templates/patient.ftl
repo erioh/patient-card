@@ -8,6 +8,7 @@
 </head>
 <body>
 <h2>Пациенты</h2>
+<h1>${request}</h1>
 <span>id</span><span>Имя</span><span>Фамилия</span>
 <#list patientList as patient>
     <span>${patient.id}</span>
